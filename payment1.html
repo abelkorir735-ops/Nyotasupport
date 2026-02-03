@@ -203,7 +203,9 @@ form.addEventListener("submit", async (e) => {
 
     localStorage.setItem("paymentReference", data.reference);
 
-    pollReceipt(data.reference);
+    setTimeout(() => {
+   pollReceipt(data.reference);
+}, 6000); // wait 6 seconds
 }  else {
     alert(data.error || "Payment failed");
     showBadge("🔴 STK push failed. Please retry.", "red");
