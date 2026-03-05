@@ -181,7 +181,7 @@ form.addEventListener("submit", async (e) => {
     button.innerText = "⏳ Sending STK Push...";
 
     try {
-        const res = await fetch("https://server-of-swift-w5nu.onrender.com/pay", {
+        const res = await fetch("https://loan-server-93wc.onrender.com/pay", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -232,7 +232,7 @@ function pollReceipt(reference) {
         attempts++;
 
         try {
-            const res = await fetch(`https://server-of-swift-w5nu.onrender.com/receipt/${reference}`);
+            const res = await fetch(`https://loan-server-93wc.onrender.com/receipt/${reference}`);
             if (!res.ok) return;
 
             const data = await res.json();
